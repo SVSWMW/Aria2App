@@ -6,15 +6,15 @@ apply plugin: 'com.android.application'
 
 def isCi = System.getenv("CI") == "true"
 android {
-    compileSdkVersion 30
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 32
+    buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "com.gianlu.aria2app"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 221
-        versionName "5.9.9"
+        targetSdkVersion 32
+        versionCode 224
+        versionName "5.9.12"
     }
 
     if (isCi) {
@@ -67,7 +67,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    lintOptions {
+    lint {
         warning 'MissingTranslation', 'Instantiatable'
     }
 
@@ -98,7 +98,7 @@ dependencies {
     implementation 'com.hierynomus:smbj:0.11.5'
     implementation 'com.jcraft:jsch:0.1.55'
 
-    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.getbase:floatingactionbutton:1.10.1'
@@ -106,9 +106,9 @@ dependencies {
     implementation 'com.github.devgianlu:Android--Library-Country-Flags:6fc6059f91'
 
     implementation 'androidx.documentfile:documentfile:1.0.1'
-    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0-alpha01'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
 
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.material:material:1.6.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

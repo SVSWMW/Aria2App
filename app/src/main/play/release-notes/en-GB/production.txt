@@ -1,5 +1,2 @@
 ### Fixed
-- Minor bug fixes
-
-### Changed
-- Updated third party libraries
+- Crash on startup for some devices with notification service
